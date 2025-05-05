@@ -1,4 +1,3 @@
-import { get } from "http";
 import "./globals.css";
 import { getLocale } from "next-intl/server";
 
