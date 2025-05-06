@@ -1,17 +1,26 @@
 import SwitchLang from "@/components/custom/SwitchLang";
 import prisma from "@/src/lib/prisma";
 import { getTranslations } from "next-intl/server";
+import Link from "next/link"; 
 
 export default async function HomePage() {
 	const products = await prisma.product.findMany();
 	const t = await getTranslations("home");
 	const s = await getTranslations("shop");
+	const a = await getTranslations("admin");
 
 	return (
 		<div className="min-h-screen bg-gray-100">
-			<header className="bg-white shadow p-4 flex items-center justify-between">
+			<header className="bg-white shadow p-5 flex items-center justify-between">
 				<h1 className="text-xl font-bold text-gray-800">{s("title")}</h1>
-				<SwitchLang />
+				<div className="flex items-center space-x-4">
+					<SwitchLang />
+					<Link href="/admin">
+						<button className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer">
+							{a("title")}
+						</button>
+					</Link>
+				</div>
 			</header>
 
 			<div className="flex flex-col items-center justify-center text-center p-5 text-black">
@@ -41,4 +50,5 @@ export default async function HomePage() {
 		</div>
 	);
 }
+
 

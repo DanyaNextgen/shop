@@ -168,7 +168,7 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:Frozzen1337DB!@localhost:5432/shop?sslmode=disable"
+        "value": "postgresql://neondb_owner:npg_EyruzM5oT2nP@ep-holy-resonance-a4f3pj4e-pooler.us-east-1.aws.neon.tech/prisma_migrate_shadow_db_db384306-c564-4007-8c6a-e108b999be36?sslmode=require"
       }
     }
   },

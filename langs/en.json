@@ -5,5 +5,8 @@
     },
     "shop": {
         "title": "Online Shop"
+    },
+    "admin": {
+        "title": "Admin Panel"
     }
 }
